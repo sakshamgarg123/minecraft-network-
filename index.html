@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Network</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/placeholder.svg" alt="Logo" class="logo-img">
+            MCNetwork
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="logout.html">logout</a></li>
+            <li><a href="https://discord.com/invite/SbNYQcjD" class="discord-btn"><i class="fab fa-discord"></i> Discord</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="parallax-bg"></div>
+        <div class="hero-content">
+            <h1>Join the Adventure</h1>
+            <p class="server-status">
+                <span class="status-dot online"></span>
+                <span class="player-count">1,337 Players Online</span>
+            </p>
+            <div class="server-ip">
+                <span class="ip">play.mcnetwork.com</span>
+                <button class="copy-ip" onclick="copyIP()">Copy IP</button>
+            </div>
+            <button class="cta-button">Play Now</button>
+        </div>
+        <canvas id="minecraft-3d"></canvas>
+    </div>
+
+    <section id="games" class="games-section">
+        <h2>Featured Games</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="images/placeholder.svg" data-src="images/survival.jpg.png" alt="Survival" class="lazy-load">
+                    <div class="game-overlay">
+                        <span class="play-now">Play Now</span>
+                    </div>
+                </div>
+                <h3>Survival</h3>
+                <p>Classic Minecraft survival with custom features</p>
+                <span class="player-count"><i class="fas fa-users"></i> 458 Playing</span>
+            </div>
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="images/skyblock.jpg" alt="SkyBlock" class="lazy-load">
+                    <div class="game-overlay">
+                        <span class="play-now">Play Now</span>
+                    </div>
+                </div>
+                <h3>SkyBlock</h3>
+                <p>Start from a floating island and build your empire</p>
+                <span class="player-count"><i class="fas fa-users"></i> 623 Playing</span>
+            </div>
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="images/placeholder.svg" data-src="images/bedwars.jpg" alt="BedWars" class="lazy-load">
+                    <div class="game-overlay">
+                        <span class="play-now">Play Now</span>
+                    </div>
+                </div>
+                <h3>BedWars</h3>
+                <p>Protect your bed and destroy others</p>
+                <span class="player-count"><i class="fas fa-users"></i> 256 Playing</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2>Why Choose Us?</h2>
+            <div class="section-divider">
+                <img src="images/divider.png" alt="Divider" class="divider-img">
+            </div>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-server"></i>
+                <h3>High Performance</h3>
+                <p>Powered by enterprise-grade hardware</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Anti-Cheat</h3>
+                <p>Advanced protection against cheaters</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Active Community</h3>
+                <p>Join thousands of players</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our staff is always here to help</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="store" class="store-section">
+        <div class="section-header">
+            <h2>Featured Store Items</h2>
+            <div class="section-divider">
+                <img src="images/divider.png" alt="Divider" class="divider-img">
+            </div>
+        </div>
+        <div class="store-grid">
+            <div class="store-card">
+                <div class="item-tag">Popular</div>
+                <div class="store-image">
+                    <img src="images/placeholder.svg" data-src="images/rank-vip.png" alt="VIP Rank" class="lazy-load">
+                </div>
+                <h3>VIP Rank</h3>
+                <p class="price">$9.99</p>
+                <button class="store-button">Purchase</button>
+            </div>
+            <div class="store-card">
+                <div class="item-tag">Best Value</div>
+                <div class="store-image">
+                    <img src="images/placeholder.svg" data-src="images/rank-mvp.png" alt="MVP Rank" class="lazy-load">
+                </div>
+                <h3>MVP Rank</h3>
+                <p class="price">$19.99</p>
+                <button class="store-button">Purchase</button>
+            </div>
+            <div class="store-card">
+                <div class="store-image">
+                    <img src="images/placeholder.svg" data-src="images/coins.png" alt="Game Coins" class="lazy-load">
+                </div>
+                <h3>10,000 Coins</h3>
+                <p class="price">$4.99</p>
+                <button class="store-button">Purchase</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="https://discord.com/invite/SbNYQcjD" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MCNetwork. Not affiliated with Mojang AB.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

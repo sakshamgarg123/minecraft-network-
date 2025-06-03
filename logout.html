@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - MCNetwork</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/placeholder.svg" alt="Logo" class="logo-img">
+            MCNetwork
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#discord" class="discord-btn"><i class="fab fa-discord"></i> Discord</a></li>
+        </ul>
+    </nav>
+
+    <div class="logout-container">
+        <div class="logout-box">
+            <div class="logout-icon">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <h2>Logging Out</h2>
+            <p class="logout-message">Are you sure you want to log out?</p>
+            
+            <div class="session-info">
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <span id="username">Username</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span id="session-time">Session time: 2h 30m</span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="confirm-logout" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Confirm Logout
+                </button>
+                <button id="cancel-logout" class="cancel-btn">
+                    <i class="fas fa-times"></i>
+                    Cancel
+                </button>
+            </div>
+
+            <div class="additional-options">
+                <label class="device-checkbox">
+                    <input type="checkbox" id="all-devices">
+                    <span class="checkmark"></span>
+                    Logout from all devices
+                </label>
+            </div>
+
+            <div class="quick-links">
+                <p>Quick Links:</p>
+                <div class="link-buttons">
+                    <a href="index.html" class="quick-link">
+                        <i class="fas fa-home"></i>
+                        Homepage
+                    </a>
+                    <a href="#support" class="quick-link">
+                        <i class="fas fa-headset"></i>
+                        Support
+                    </a>
+                    <a href="#discord" class="quick-link">
+                        <i class="fab fa-discord"></i>
+                        Discord
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="particles"></div>
+    </div>
+
+    <script src="js/logout.js"></script>
+</body>
+</html> 
